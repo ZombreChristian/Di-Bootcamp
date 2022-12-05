@@ -1,0 +1,5 @@
+"5<3 le resultat:False"
+"3 === 3  le resultat : True"
+"3 === '3'  le resultat : False"
+" '3' > 3 le resultat : TypeError"
+" 'Hello'=='hello' le resultat : False"
