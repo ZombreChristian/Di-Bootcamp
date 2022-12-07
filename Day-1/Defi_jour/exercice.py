@@ -1,4 +1,6 @@
 def saisie():
+    
+    
     utilisateur = input("Saisissez une chaine :")
     taille = len(utilisateur)
     if taille < 10:
@@ -11,4 +13,5 @@ def saisie():
     for i in range(0,taille):
         print(utilisateur[:i+1])
     
-saisie()            
+    
+saisie()
