@@ -8,5 +8,7 @@ def saisie():
 
     print("Le premier caractère :"+utilisateur[0]+"\n Le dernier caracère :"+utilisateur[taille-1]) 
 
+    for i in range(0,taille):
+        print(utilisateur[:i+1])
     
 saisie()            
