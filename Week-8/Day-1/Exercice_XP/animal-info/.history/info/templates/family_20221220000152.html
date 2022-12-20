@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<h1>Liste des familles d'animaux </h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+    </tr>
+    {% for x in people %}
+    <tr>
+        <td>{{values.id}}</td>
+        <td>{{values.name}}</td>
+        <td>{{values.age}}</td>
+        <td>{{values.country}}</td>
+        <td>{{values.detail}}detail</td>
+    </tr>
+    {% endfor %}  
+</table>
+{% endblock content %} 

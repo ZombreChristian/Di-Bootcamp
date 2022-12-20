@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<h1>La liste des animaux</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Legs</td>
+        <td>Weight</td>
+        <td>Heigth</td>
+        <td>Speed</td>
+        <td>Family</td>
+    </tr>
+    {% for y in animals %}
+    <tr>
+        <td>{{y.id}}</td>
+        <td>{{values.name}}</td>
+        <td>{{values.age}}</td>
+        <td>{{values.country}}</td>
+        <td>{{values.detail}}detail</td>
+    </tr>
+    {% endfor %}  
+</table>l>
+
+{% endblock content %} 

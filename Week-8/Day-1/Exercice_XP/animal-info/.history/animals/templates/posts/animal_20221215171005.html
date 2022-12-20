@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ani</title>
+</head>
+<body>
+    <h1>Hello {{user.first_name}} {{user.last_name}}</h1>
+    <h2>Welcome to my website</h2> 
+    <h4>Today we are going to talk about</h4> 
+    <ul> 
+        {% for x in subjects %} 
+        <li>{{ x.title | title }} by {{ x.author}}</li> 
+        {% endfor %} 
+    </ul>
+</body>
+</html>

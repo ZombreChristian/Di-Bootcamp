@@ -1,0 +1,11 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<h1>Affichage de la liste des animaux</h1>
+<ul> 
+    {% for x in subjects %} 
+    <li>{{ x.title | title }} by {{ x.author}}</li> 
+    {% endfor %} 
+</ul>
+
+{% endblock content %} 

@@ -1,0 +1,5 @@
+user = input("Donnez des nombres séparés par des virgule :")
+listes = user.split()
+tuples = eval(str(user))
+print("Listes:",listes)
+print("Tuples:",tuples)

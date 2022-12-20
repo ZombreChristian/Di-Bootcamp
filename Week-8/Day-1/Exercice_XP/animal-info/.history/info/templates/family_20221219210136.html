@@ -1,0 +1,10 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<ul> 
+    {% for x in families %} 
+    <li>{{ x.id | title }} by {{ x.author}}</li> 
+    {% endfor %} 
+</ul>
+
+{% endblock content %} 

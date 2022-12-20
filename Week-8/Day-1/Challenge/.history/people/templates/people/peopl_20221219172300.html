@@ -1,0 +1,26 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+
+<h1>Liste des personnes </h1>
+<table>
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>age</td>
+        <td>country</td>
+        <td>detail</td>
+    </tr>
+    {% for values in people %}
+    <tr>
+        <td>{{values.id}}</td>
+        <td>{{values.name}}</td>
+        <td>{{values.age}}</td>
+        <td>{{values.country}}</td>
+        <td>{{values.}}>detail<a/></td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock content %} 
