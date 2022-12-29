@@ -1,7 +1,21 @@
-def make_shirt(taille,message):
-    print("The size of the shirt is ",taille,"and the text is ",message)
+def make_shirt(size,text):
+    print(f"The size of the shirt is :{size} and the text is :{text}".format(size,text))
 
-make_shirt(25,"Salut")
+make_shirt(25,"Hello my brother")
 
-make_shirt(taille = 100,message="J'aime python")
+print("******************************")
+    
+def make_shirt(size = 100,text="J'aime python"):
+    print(f"The size of the shirt is :{size} and the text is :{text}".format(size,text))
+make_shirt()
+print("******************************")
+make_shirt(250)
+make_shirt(150)
+print("******************************")
+make_shirt(1245,"I'm a maintain")
+print("******************************")
+a = make_shirt()
+
+
+
     

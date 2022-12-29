@@ -1,4 +1,4 @@
-def describe_city(nomVille,pays="Mali"):
-    print(nomVille," is in",pays)
+def describe_city(city,country="Mali"):
+    print(city," is in",country)
 describe_city("Bobo","Burkina Faso")    
 

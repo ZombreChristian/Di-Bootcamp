@@ -1,0 +1,20 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<h1>Liste des familles d'animaux </h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+    </tr>
+    {% for x in families %}
+    <tr>
+        <td>{{x.id}}</td>
+        <td>{{x.name}}</td>
+        
+    </tr>
+
+    <a href='/animal'>
+    {% endfor %}  
+</table>
+{% endblock content %} 
