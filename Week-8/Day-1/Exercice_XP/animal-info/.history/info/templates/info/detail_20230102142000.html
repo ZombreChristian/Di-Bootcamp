@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h1>La liste des animaux</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Legs</td>
+        <td>Weight</td>
+        <td>Heigth</td>
+        <td>Speed</td>
+        <td>Family</td>
+    </tr>
+    {% for i in range(0,len(animals)) %}
+    <tr>
+        <td>{{animals[0].id}}</td>
+        <td>{{animals[0].name}}</td>
+        <td>{{animals[0].legs}}</td>
+        <td>{{animals[i].weight}}</td>
+        <td>{{animals[i].height}}</td>
+        <td>{{animals[0].speed}}</td>
+        <td>{{animals[0].family}}</td>
+    </tr>
+    
+    {% endfor %}
+    
+</table>
+
+{% endblock content %} 

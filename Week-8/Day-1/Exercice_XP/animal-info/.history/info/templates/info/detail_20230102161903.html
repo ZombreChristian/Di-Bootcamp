@@ -1,0 +1,23 @@
+
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<h1>La liste des animaux</h1>
+<table>
+    
+    {% for y in animal_detail %}
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Legs</td>
+        <td>Weight</td>
+        <td>Heigth</td>
+        <td>Speed</td>
+        <td>Family</td>
+    </tr>
+    {% endfor %}
+    
+</table>
+
+{% endblock content %} 

@@ -1,0 +1,32 @@
+
+{% extends 'base.html' %} 
+{% from .models import animals %}
+{% block content %}
+
+<h1>La liste des animaux</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Legs</td>
+        <td>Weight</td>
+        <td>Heigth</td>
+        <td>Speed</td>
+        <td>Family</td>
+    </tr>
+    {% for y in animals %}
+    <tr>
+        <td>{{y.id}}</td>
+        <td>{{y.name}}</td>
+        <td>{{y.legs}}</td>
+        <td>{{y.weight}}</td>
+        <td>{{y.height}}</td>
+        <td>{{y.speed}}</td>
+        <td>{{y.family}}</td>
+    </tr>
+    
+    {% endfor %}
+    <a href='/'>Family</a>  
+</table>
+
+{% endblock content %} 
