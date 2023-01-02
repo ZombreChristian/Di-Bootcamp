@@ -12,6 +12,17 @@ def animal_detail(request,id):
     
     return render(request, 'info/detail.html',context)
 
+def animal(request):
+    
+    context = {
+        "animals" : animals
+    }
+    
+    return render(request, 'info/animal.html',context)
+
+
+
+
 def family(request):
     
     context = {
