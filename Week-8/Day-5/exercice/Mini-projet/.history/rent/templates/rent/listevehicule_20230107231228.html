@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+    <h3>Liste des clients</h3>
+</p>
+
+<table>
+                
+        <tr>
+            <th>Type vehicule</th>
+            <th>Last_name</th>
+            <th>Email</th>
+            <th>Phone_number</th>
+            <th>Adresse</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        
+              
+        {% for client in clients %}
+        <tr>
+            <td>{{client.vehicule_type}}</td>
+            <td> {{client.date_created}}</td>
+            <td>{{client.prix}}</td>
+            <td>{{client.taille}}</td>
+            
+            
+            
+        </tr>
+    {% endfor %} 
+        
+        <br>
+        <button><a href="{% url 'ajoutervehicule' %}  ">Add New Client</a></button>
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

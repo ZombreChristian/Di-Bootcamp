@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+    <h3>Liste des locations</h3>
+</p>
+
+<table>
+                
+        <tr>
+            <th>Type location</th>
+            <th>Date créé</th>
+            <th>Prix</th>
+            <th>Ve</th>
+        </tr>
+        
+              
+        {% for location in locations %}
+        <tr>
+            <td>{{location.date_location}}</td>
+            <td> {{location.date_retour}}</td>
+            <td>{{location.client}}</td>
+            <td>{{location.vehicule}}</td>
+            
+            
+            
+        </tr>
+    {% endfor %} 
+        
+        <br>
+        <button><a href="{% url 'ajouterlocation' %}  ">Add New location</a></button>
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+    <h3>Liste des vehicules</h3>
+</p>
+
+<table>
+                
+        <tr>
+            <th>Type vehicule</th>
+            <th>Date créé</th>
+            <th>Prix</th>
+            <th>Taille</th>
+        </tr>
+        
+              
+        {% for vehicule in vehicules %}
+        <tr>
+            <td>{{vehicule.vehicule_type}}</td>
+            <td> {{vehicule.date_created}}</td>
+            <td>{{vehicule.prix}}</td>
+            <td>{{vehicule.taille}}</td>
+            
+            
+            
+        </tr>
+    {% endfor %} 
+        
+        <br>
+        <button><a href="" >Add New Vehicule</a></button>
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/ajouterlocation">
+    {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Entrer les réferences de la location</h3>
+        </p>
+        <div>
+            <p>Date location:</p>{{form.date_location}}
+        </div>
+        <div>
+            <p>Date retour:</p>{{ form.date_retour}}
+        </div>
+        <div>
+            <p>Client:</p>{{ form.client }}
+        </div>
+        <div>
+            <p>Vehicule:</p>{{formvehicule }}
+        </div>
+       
+        <div>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+            
+
+{% endblock content %} 
+
+
+
+  
+

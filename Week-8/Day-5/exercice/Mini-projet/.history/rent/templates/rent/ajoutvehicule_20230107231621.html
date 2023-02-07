@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/ajoutervehicule">
+    {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Entrer les réferences du V</h3>
+        </p>
+        <div>
+            <p>First_name:</p>{{form.first_name}}
+        </div>
+        <div>
+            <p>Last_name:</p>{{ form.last_name }}
+        </div>
+        <div>
+            <p>Email:</p>{{ form.email }}
+        </div>
+        <div>
+            <p>Phone_number:</p>{{ form.phone_number }}
+        </div>
+        <div>
+            <p>Adresse:</p>{{ form.address }}
+        </div>
+        <div>
+            <p>City:</p>{{ form.city }}
+        </div>
+        <div>
+            <p>Country:</p>{{ form.country }}
+        </div>
+        <div>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+            
+
+{% endblock content %} 
+
+
+
+  
+

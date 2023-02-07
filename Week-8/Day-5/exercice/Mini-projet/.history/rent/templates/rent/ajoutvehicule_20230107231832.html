@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/ajoutervehicule">
+    {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Entrer les réferences du Vehicule</h3>
+        </p>
+        <div>
+            <p>Type vehicule:</p>{{form.first_name}}
+        </div>
+        <div>
+            <p>Date créé:</p>{{ form.last_name }}
+        </div>
+        <div>
+            <p>Prix:</p>{{ form.email }}
+        </div>
+        <div>
+            <p>Taille:</p>{{ form.phone_number }}
+        </div>
+       
+        <div>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+            
+
+{% endblock content %} 
+
+
+
+  
+

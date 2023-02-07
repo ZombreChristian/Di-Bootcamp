@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+    <tr>
+        <form action = "" method = "post">
+             {% csrf_token %}
+             {{form.as_table}}
+             <input type ="submit" value ="Envoyer">    
+        </form>
+        
+    </tr>    
+            
+</table>
+
+<table>
+                
+        <tr>
+            <th>First_name</th>
+            <th>Pr</th>
+            <th>Age</th>
+            <th>Adresse</th>
+            <th>Type_Loyer</th>
+            <th>Supprimer</th>
+            <th>Editer</th>
+        </tr>
+              
+         {% for client in clients %}
+            <tr>
+                <td>{{client.first_name}}</td>
+                <td> {{client.last_name}}</td>
+                <td>{{client.email}}</td>
+                <td>{{client.phone_number}}</td>
+                <td>{{client.address}}</td>
+                <td>{{client.city}}</td>
+                <td>{{client.country}}</td>
+                
+            </tr>
+        {% endfor %}     
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

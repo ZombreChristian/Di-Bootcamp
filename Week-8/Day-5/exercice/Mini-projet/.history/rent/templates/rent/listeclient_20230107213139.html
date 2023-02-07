@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<p>
+    
+</p>
+
+<table>
+                
+        <tr>
+            <th>First_name</th>
+            <th>Last_name</th>
+            <th>Email</th>
+            <th>Phone_number</th>
+            <th>Adresse</th>
+            <th>City</th>
+            <th>Country</th>
+        </tr>
+        
+              
+        {% for client in clients %}
+        <tr>
+            <td>{{client.first_name}}</td>
+            <td> {{client.last_name}}</td>
+            <td>{{client.email}}</td>
+            <td>{{client.phone_number}}</td>
+            <td>{{client.address}}</td>
+            <td>{{client.city}}</td>
+            <td>{{client.country}}</td>
+            
+        </tr>
+    {% endfor %} 
+        
+        <br>
+        <button><a href="{% url 'ajouterclient' %}  ">Add New Client</a></button>
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

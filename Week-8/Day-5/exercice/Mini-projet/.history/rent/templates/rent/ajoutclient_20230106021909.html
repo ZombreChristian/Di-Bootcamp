@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block content %}
+
+<table>
+    <tr>
+        <form action = "" method = "post">
+             {% csrf_token %}
+             {{form.as_table}}
+             <input type ="submit" value ="Envoyer">    
+        </form>
+        
+    </tr>    
+            
+</table>
+
+<table>
+                
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Age</th>
+            <th>Adresse</th>
+            <th>Type_Loyer</th>
+            <th>Supprimer</th>
+            <th>Editer</th>
+        </tr>
+              
+         {% for client in clients %}
+            <tr>
+                <td>{{}}</td>
+                <td> {{}}</td>
+                <td>{{}}</td>
+                <td>{{locataire.adresse}}</td>
+                <td>{{locataire.locataireLoyer}}</td>
+                <td>
+                    <a href="{% url 'delete' locataire.id %}" title="supprimer">Supprimer</a>
+                </td>
+                <td>
+                    <a href="{% url 'edit' locataire.id %}" title="editer">Editer</a>
+                </td>
+            </tr>
+        {% endfor %}     
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

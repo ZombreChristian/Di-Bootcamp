@@ -1,0 +1,32 @@
+
+<div class="row mb-2">
+    {% if client %}
+            <div class="col-md-12">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <h3 class="mb-0 text-center">  <strong class="d-inline-block mb-2 text-success">clientrmations sur la location </strong> </h3>
+                  <div class="col p-4 d-flex flex-column position-static">
+                    <h4> <strong class="d-inline-block mb-2 text-success">ID : {{client.id}}</strong> <h4>
+                    <strong class="d-inline-block mb-2 text-primary">infos clients<strong>
+                   <b> <h3 class="mb-0">Nom : {{client.client.first_name}}</h3></b>
+                    <h4><div class="mb-1 text-muted">Prenom : {{client.client.last_name}}</div></h4>
+                      
+                            <strong class="d-inline-block mb-2 text-primary">infos Vehicule</strong>
+                    <h4><div class="mb-1 text-muted">Type : {{client.vehicule.vehicule_type.name}}</div></h2>
+                        <h4><div class="mb-1 text-muted">date de création : {{client.vehicule.date_creation}}</div></h2>
+                    
+                  </div>
+                </div>
+            </div>
+        
+        
+          
+          {% else  %}
+           
+          {% endif %}
+          <a href=" "class="btn btn-primary">Retour</a>
+    
+        </div>
+      </div>
+    </div>
+  </div>
+

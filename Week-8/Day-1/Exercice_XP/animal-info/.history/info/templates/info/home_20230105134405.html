@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+{% for d,s in tableau.items  %}
+<h1>{{d}}</h1>
+<table>
+    {% for a in s %}
+    
+        {% if a == s.0 %}
+            <tr>
+                {% for  y in a.keys  %}
+                    <td>{{y}}</td>
+                {% endfor %}    
+        </tr>
+        {% endif %}
+        <tr>
+            {% for z in a.values %}
+            <td>{{z}}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+
+{% endblock content %}
+   
+        
+
+
+
+
+
+<!-- <h1>La liste des animaux</h1>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Legs</td>
+        <td>Weight</td>
+        <td>Heigth</td>
+        <td>Speed</td>
+        <td>Family</td>
+    </tr>
+    {% for y in animals %}
+    <tr>
+        <td>{{y.id}}</td>
+        <td>{{y.name}}</td>
+        <td>{{y.legs}}</td>
+        <td>{{y.weight}}</td>
+        <td>{{y.height}}</td>
+        <td>{{y.speed}}</td>
+        <td>{{y.family}}</td>
+    </tr>
+    
+    {% endfor %}
+    
+</table>
+

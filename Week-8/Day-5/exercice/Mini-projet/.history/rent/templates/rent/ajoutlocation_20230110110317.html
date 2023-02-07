@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1> Creer une location</h1>
+
+  <form method='POST' action="">
+    {% csrf_token %}
+    <div class="form-floating">
+         <select class="form-control" name="client" required>
+             {% for client in clients %}
+              <option value=''>{{client.first_name}}
+                <td> {{client.last_name}}</td></option>
+            {% endfor %}
+         </select>
+        <label for="client">Identifiant d'Utilisateur</label>
+      </div>
+      <div class="form-floating">
+        <select class="form-control" name="voiture" required>
+          {% for voi in voit %}
+           <option value='{{voi.id }}'>{{ voi.type_vehicule_id.nom }}</option>
+         {% endfor %}
+      </select>
+        <label for="voiture">Identifiant du Vehicule</label>
+      </div>
+
+      <div class="form-floating">
+        <input type="date" class="form-control" id="nom" name="date_crea" placeholder="date de location" required>
+        <label for="date_crea">Date location</label>
+      </div>
+      <div class="form-floating">
+        <input type="date" class="form-control" id="prenom" name="date_ret" placeholder="date de retour" required>
+        <label for="date_ret">date de retour</label>
+      </div>
+    <div class="form-floating">
+      <input type="number" class="form-control" id="email" name="cout" placeholder="montant de la location" required>
+      <label for="email">Montant</label>
+    </div>
+    
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Valider</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+
+
+{% endblock content %}
+
+
+  

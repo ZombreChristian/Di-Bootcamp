@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<div class='col-sm-12'>
+    <h3 class="text-center">Listes des Locations</h3>
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+    
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom(s)</th>
+          <th scope="col">Vehicule loué</th>
+          
+          <th scope="col">date location</th>
+          <th scope="col">date location</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        {% for pers in locations %}
+        <tr>
+         
+          <td>{{pers.client_id.first_name}}</td>
+          <td>{{pers.client_id.last_name}}</td>
+          <td>{{pers.vehicules.vehicule_type.name}}</td>
+          
+          <td>{{pers.date_location}}</td>
+          <td>{{pers.date_retour}}</td>
+          
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+   </div>
+    
+    {% endblock content %}

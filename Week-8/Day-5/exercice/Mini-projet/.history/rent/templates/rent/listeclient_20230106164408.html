@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<table>
+                
+        <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Age</th>
+            <th>Adresse</th>
+            <th>Type_Loyer</th>
+            <th>Action</th>
+        </tr>
+              
+         {% for locataire in locataires %}
+            <tr>
+                <td>{{locataire.nom}}</td>
+                <td> {{locataire.prenom}}</td>
+                <td>{{locataire.age}}</td>
+                <td>{{locataire.adresse}}</td>
+                <td>{{locataire.locataireLoyer}}</td>
+                <td>
+                    <a href="{% url 'delete' locataire.id %}" title="supprimer">Supprimer</a>
+                    <a href="{% url 'edit' locataire.id %}" title="editer">Editer</a>
+                </td>
+            </tr>
+        {% endfor %} 
+        
+        <br>
+        <button><a href="index">Add New Client</a></button>
+                
+                
+</table>
+            
+
+{% endblock content %} 
+
+
+
+  
+

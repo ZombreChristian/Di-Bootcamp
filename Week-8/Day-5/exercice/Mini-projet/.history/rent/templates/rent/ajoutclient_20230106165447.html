@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form method="POST" action="/index">
+    {% csrf_token %}
+    <div>
+        <br>
+        <p>
+            <h3>Entrer les réferences du locataire</h3>
+        </p>
+        <div>
+            <p>First_name:</p>{{form.}}
+        </div>
+        <div>
+            <p>Last_name:</p>{{ form.prenom }}
+        </div>
+        <div>
+            <p>Email:</p>{{ form.age }}
+        </div>
+        <div>
+            <p>Phone_number:</p>{{ form.adresse }}
+        </div>
+        <div>
+            <p>Adresse:</p>{{ form.locataireLoyer }}
+        </div>
+        <div>
+            <p>City:</p>{{ form.locataireLoyer }}
+        </div>
+        <div>
+            <p>Country:</p>{{ form.locataireLoyer }}
+        </div>
+        <div>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+            
+
+{% endblock content %} 
+
+
+
+  
+
